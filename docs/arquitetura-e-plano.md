@@ -38,4 +38,40 @@ A divisão do sistema em componentes permite organizar melhor suas responsabilid
 
 Essa arquitetura representa o planejamento inicial do sistema e servirá como referência para as próximas etapas de implementação.
 
-GARDENSTICK — Flores que tornam momentos especiais! 🌷
+4. Interfaces principais
+
+O sistema GARDENSTICK contará com interfaces destinadas aos clientes, funcionários e administradores, facilitando a utilização das funcionalidades da floricultura virtual.
+
+As principais interfaces serão:
+
+4.1 Página inicial: apresentará a floricultura, os produtos em destaque e as opções de navegação.
+
+4.2 Catálogo de produtos: permitirá visualizar flores, plantas e arranjos, além de pesquisar produtos pelo nome e categoria.
+
+4.3 Carrinho de compras: permitirá visualizar os produtos selecionados, alterar quantidades, remover itens e consultar o valor total.
+
+4.4 Finalização da compra: permitirá confirmar os produtos, informar os dados de entrega e selecionar uma forma de pagamento.
+
+4.5 Meus pedidos: permitirá que os clientes consultem suas compras e acompanhem o status dos pedidos.
+
+4.6 Painel administrativo: permitirá que os administradores cadastrem, editem e removam produtos, além de visualizar e gerenciar pedidos.
+
+5. Principais dados manipulados
+
+Para garantir o funcionamento do sistema, serão manipuladas informações relacionadas aos usuários, produtos e operações de compra.
+
+5.1 Usuários: nome, e-mail, senha protegida e tipo de usuário.
+
+5.2 Produtos: nome, descrição, preço, imagem e categoria.
+
+5.3 Categorias: nome e descrição dos grupos de produtos.
+
+5.4 Carrinho: identificação dos produtos selecionados e suas respectivas quantidades.
+
+5.5 Pedidos: número do pedido, identificação do cliente, data, valor total e status.
+
+5.6 Pagamentos: identificador da transação, valor, método utilizado e situação do pagamento.
+
+5.7 Entrega: endereço e informações necessárias para a entrega dos produtos.
+
+Essas informações serão utilizadas para organizar as operações da floricultura e permitir o gerenciamento adequado das compras realizadas pelos clientes.
