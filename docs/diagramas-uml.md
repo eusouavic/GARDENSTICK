@@ -1,0 +1,173 @@
+GARDENSTICK 🌷
+Diagramas UML
+1. Diagrama de Casos de Uso
+
+O Diagrama de Casos de Uso representa os atores que interagem com o sistema GARDENSTICK e as funcionalidades disponíveis para cada um deles.
+
+Atores
+Cliente: responsável por visualizar produtos, pesquisar flores, adicionar itens ao carrinho, realizar pedidos, efetuar pagamentos e acompanhar compras.
+Administrador: responsável pelo gerenciamento dos produtos e dos pedidos.
+Funcionário: responsável por consultar pedidos e auxiliar no acompanhamento das compras.
+Funcionalidades
+
+Cliente:
+
+Visualizar catálogo.
+Pesquisar produtos.
+Adicionar produtos ao carrinho.
+Realizar pedidos.
+Efetuar pagamento.
+Acompanhar pedidos.
+
+Administrador:
+
+Cadastrar produtos.
+Editar produtos.
+Remover produtos.
+Visualizar pedidos.
+Atualizar status dos pedidos.
+
+Funcionário:
+
+Consultar pedidos.
+Acompanhar status dos pedidos.
+Código do diagrama
+mermaid
+flowchart LR
+    C[Cliente]
+    A[Administrador]
+    F[Funcionário]
+
+    subgraph G["Sistema GARDENSTICK"]
+      UC1([Visualizar catálogo])
+      UC2([Pesquisar produtos])
+      UC3([Adicionar ao carrinho])
+      UC4([Realizar pedido])
+      UC5([Efetuar pagamento])
+      UC6([Acompanhar pedidos])
+      UC7([Cadastrar produtos])
+      UC8([Editar produtos])
+      UC9([Remover produtos])
+      UC10([Visualizar pedidos])
+      UC11([Atualizar status])
+    end
+
+    C --- UC1
+    C --- UC2
+    C --- UC3
+    C --- UC4
+    C --- UC5
+    C --- UC6
+
+    A --- UC7
+    A --- UC8
+    A --- UC9
+    A --- UC10
+    A --- UC11
+
+    F --- UC10
+    F --- UC6
+
+Explicação
+
+O diagrama apresenta as principais funcionalidades disponíveis para cada tipo de usuário. O cliente utiliza o sistema para realizar compras, enquanto o administrador gerencia os produtos e pedidos. O funcionário auxilia no acompanhamento das compras.
+
+2. Diagrama de Classes
+
+O Diagrama de Classes apresenta a estrutura do sistema por meio de classes, atributos e relacionamentos.
+
+Principais classes
+Cliente
+Produto
+Categoria
+Carrinho
+ItemCarrinho
+Pedido
+ItemPedido
+Pagamento
+Administrador
+Código do diagrama
+mermaid
+classDiagram
+    class Cliente {
+        +int id
+        +string nome
+        +string email
+        +cadastrar()
+        +consultarPedidos()
+    }
+
+    class Produto {
+        +int id
+        +string nome
+        +string descricao
+        +decimal preco
+        +int estoque
+        +consultar()
+    }
+
+    class Categoria {
+        +int id
+        +string nome
+    }
+
+    class Carrinho {
+        +int id
+        +adicionarProduto()
+        +removerProduto()
+        +calcularTotal()
+    }
+
+    class ItemCarrinho {
+        +int quantidade
+        +decimal subtotal
+    }
+
+    class Pedido {
+        +int id
+        +date data
+        +string status
+        +decimal valorTotal
+        +criarPedido()
+        +atualizarStatus()
+    }
+
+    class ItemPedido {
+        +int quantidade
+        +decimal precoUnitario
+    }
+
+    class Pagamento {
+        +int id
+        +string metodo
+        +string status
+        +decimal valor
+    }
+
+    class Administrador {
+        +int id
+        +string nome
+        +gerenciarProdutos()
+        +gerenciarPedidos()
+    }
+
+    Categoria "1" --> "0..*" Produto
+    Cliente "1" --> "1" Carrinho
+    Carrinho "1" --> "0..*" ItemCarrinho
+    Produto "1" --> "0..*" ItemCarrinho
+    Cliente "1" --> "0..*" Pedido
+    Pedido "1" --> "1..*" ItemPedido
+    Produto "1" --> "0..*" ItemPedido
+    Pedido "1" --> "0..1" Pagamento
+    Administrador ..> Produto
+    Administrador ..> Pedido
+
+Explicação
+
+O diagrama apresenta as principais entidades do sistema e como elas se relacionam. Um cliente pode possuir um carrinho e realizar vários pedidos. Os pedidos são compostos por itens relacionados aos produtos disponíveis no catálogo. O administrador gerencia os produtos e pedidos.
+
+3. Considerações finais
+
+Os diagramas UML permitem visualizar a organização e o funcionamento da GARDENSTICK antes da implementação.
+
+O Diagrama de Cas
