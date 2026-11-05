@@ -19,31 +19,54 @@ Fornecedores;
 Entregadores;
 Equipe de desenvolvimento.
 
-Requisitos funcionais
+1. Requisitos funcionais
+RF01 — Visualização de produtos: O sistema deve permitir que os clientes visualizem um catálogo de flores, plantas e arranjos, contendo nome, descrição, preço e imagem.
 
-RF01 — Visualização de produtos: O sistema deve permitir que os clientes visualizem o catálogo de flores e arranjos disponíveis.
+RF02 — Pesquisa de produtos: O sistema deve permitir que os clientes pesquisem produtos pelo nome e filtrem os resultados por categoria.
 
-RF02 — Pesquisa de produtos: O sistema deve permitir que os clientes procurem flores por nome e categoria.
+RF03 — Carrinho de compras: O sistema deve permitir que os clientes adicionem produtos ao carrinho, removam itens e alterem suas quantidades.
 
-RF03 — Carrinho de compras: O sistema deve permitir que os clientes adicionem produtos ao carrinho de compras.
+RF04 — Realização de pedidos: O sistema deve permitir que os clientes confirmem seus pedidos, informando os dados necessários para a entrega.
 
-RF04 — Realização de pedidos: O sistema deve permitir que os clientes realizem pedidos pelo site.
+RF05 — Pagamento online: O sistema deve disponibilizar opções de pagamento online e informar o resultado do processamento.
 
-RF05 — Pagamento online: O sistema deve disponibilizar formas de pagamento online.
-
-RF06 — Acompanhamento de pedidos: O sistema deve permitir que os clientes acompanhem o status dos pedidos.
+RF06 — Acompanhamento de pedidos: O sistema deve permitir que os clientes consultem o status dos pedidos realizados.
 
 RF07 — Gerenciamento de produtos: O sistema deve permitir que os administradores cadastrem, editem e removam produtos.
 
-RF08 — Gerenciamento de pedidos: O sistema deve permitir que os administradores visualizem e gerenciem os pedidos realizados.
+RF08 — Gerenciamento de pedidos: O sistema deve permitir que os administradores visualizem os pedidos e atualizem seus respectivos status.
 
-Requisitos não funcionais
+2. Requisitos não funcionais
+RNF01 — Usabilidade: O sistema deve possuir uma interface intuitiva, organizada e de fácil navegação.
 
-RNF01 — Usabilidade: O site deve possuir uma interface bonita, intuitiva e fácil de utilizar.
+RNF02 — Responsividade: O site deve se adaptar corretamente a celulares, tablets e computadores.
 
-RNF02 — Responsividade: O site deve funcionar corretamente em celulares, tablets e computadores.
+RNF03 — Segurança: O sistema deve proteger os dados pessoais dos clientes e utilizar serviços seguros para o processamento de pagamentos, sem armazenar diretamente os dados completos dos cartões.
 
-RNF03 — Segurança: O sistema deve proteger os dados pessoais e financeiros dos clientes.
+ O que foi melhorado?
+Requisito - Melhoria realizada:
+
+RF01 - Especificação das informações exibidas dos produtos.
+
+RF02 - Diferenciação entre pesquisa e filtro por categoria.
+
+RF03 - Inclusão de remoção e alteração de quantidades.
+
+RF04 - Especificação dos dados necessários para entrega.
+
+RF05 - Inclusão do retorno do processamento do pagamento.
+
+RF06 - Especificação da consulta dos status dos pedidos.
+
+RF07 - Mantidas as operações de cadastro, edição e remoção.
+
+RF08 - Inclusão da atualização dos status dos pedidos.
+
+RNF01 -Interface descrita de maneira mais objetiva.
+
+RNF02 - Mantida a adaptação aos diferentes dispositivos.
+
+RNF03 - Maior detalhamento sobre proteção de dados e pagamentos.
 
 Definição do escopo
 Dentro do escopo (incluído)
