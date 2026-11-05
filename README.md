@@ -53,3 +53,30 @@ Vitoria Cristina Feitosa da Silva
 Gustavo de Lima Alves
 
 Disciplina: Projeto de software
+
+Arquitetura e Modelagem
+
+A arquitetura da GARDENSTICK foi planejada em cinco componentes principais:
+
+Interface Web;
+API / Backend;
+Regras de negócio;
+Banco de dados;
+Serviço de pagamento.
+Documentação do projeto
+
+Os documentos técnicos estão disponíveis na pasta docs:
+
+Requisitos e Escopo
+Arquitetura e Plano
+Diagramas UML
+Planejamento
+
+O projeto possui planejamento de equipe, definição de recursos necessários, estratégia de acompanhamento e identificação de riscos com ações preventivas.
+
+Modelagem UML
+
+Foram elaborados dois diagramas:
+
+Diagrama de Casos de Uso.
+Diagrama de Classes.
