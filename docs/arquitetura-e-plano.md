@@ -38,40 +38,84 @@ A divisão do sistema em componentes permite organizar melhor suas responsabilid
 
 Essa arquitetura representa o planejamento inicial do sistema e servirá como referência para as próximas etapas de implementação.
 
-4. Interfaces principais
+ Interfaces principais
 
 O sistema GARDENSTICK contará com interfaces destinadas aos clientes, funcionários e administradores, facilitando a utilização das funcionalidades da floricultura virtual.
 
 As principais interfaces serão:
 
-4.1 Página inicial: apresentará a floricultura, os produtos em destaque e as opções de navegação.
+ Página inicial: apresentará a floricultura, os produtos em destaque e as opções de navegação.
+ Catálogo de produtos: permitirá visualizar flores, plantas e arranjos, além de pesquisar produtos pelo nome e categoria.
+Carrinho de compras: permitirá visualizar os produtos selecionados, alterar quantidades, remover itens e consultar o valor total.
+Finalização da compra: permitirá confirmar os produtos, informar os dados de entrega e selecionar uma forma de pagamento.
+Meus pedidos: permitirá que os clientes consultem suas compras e acompanhem o status dos pedidos.
+Painel administrativo: permitirá que os administradores cadastrem, editem e removam produtos, além de visualizar e gerenciar pedidos.
 
-4.2 Catálogo de produtos: permitirá visualizar flores, plantas e arranjos, além de pesquisar produtos pelo nome e categoria.
-
-4.3 Carrinho de compras: permitirá visualizar os produtos selecionados, alterar quantidades, remover itens e consultar o valor total.
-
-4.4 Finalização da compra: permitirá confirmar os produtos, informar os dados de entrega e selecionar uma forma de pagamento.
-
-4.5 Meus pedidos: permitirá que os clientes consultem suas compras e acompanhem o status dos pedidos.
-
-4.6 Painel administrativo: permitirá que os administradores cadastrem, editem e removam produtos, além de visualizar e gerenciar pedidos.
-
-5. Principais dados manipulados
+Principais dados manipulados
 
 Para garantir o funcionamento do sistema, serão manipuladas informações relacionadas aos usuários, produtos e operações de compra.
 
-5.1 Usuários: nome, e-mail, senha protegida e tipo de usuário.
-
-5.2 Produtos: nome, descrição, preço, imagem e categoria.
-
-5.3 Categorias: nome e descrição dos grupos de produtos.
-
-5.4 Carrinho: identificação dos produtos selecionados e suas respectivas quantidades.
-
-5.5 Pedidos: número do pedido, identificação do cliente, data, valor total e status.
-
-5.6 Pagamentos: identificador da transação, valor, método utilizado e situação do pagamento.
-
-5.7 Entrega: endereço e informações necessárias para a entrega dos produtos.
+Usuários: nome, e-mail, senha protegida e tipo de usuário.
+Produtos: nome, descrição, preço, imagem e categoria.
+Categorias: nome e descrição dos grupos de produtos.
+Carrinho: identificação dos produtos selecionados e suas respectivas quantidades.
+Pedidos: número do pedido, identificação do cliente, data, valor total e status.
+Pagamentos: identificador da transação, valor, método utilizado e situação do pagamento.
+Entrega: endereço e informações necessárias para a entrega dos produtos.
 
 Essas informações serão utilizadas para organizar as operações da floricultura e permitir o gerenciamento adequado das compras realizadas pelos clientes.
+
+Equipe do projeto
+
+A equipe da GARDENSTICK será responsável pelo planejamento, documentação, modelagem, desenvolvimento e testes do sistema.
+
+Responsabilidade conjunta: ambos os integrantes participarão do planejamento, revisão dos requisitos, acompanhamento das atividades e validação das funcionalidades.
+
+Recursos necessários
+
+Para o desenvolvimento do projeto serão utilizados os seguintes recursos:
+
+GitHub: utilizado para armazenar os arquivos, organizar a documentação e controlar as versões do projeto.
+Computadores: utilizados para realizar as atividades de desenvolvimento e documentação.
+Internet: necessária para acessar as ferramentas e serviços utilizados.
+Editor de código: utilizado para desenvolver o sistema.
+Ferramenta de modelagem UML: utilizada para elaborar os diagramas do projeto.
+Banco de dados: utilizado para armazenar informações de clientes, produtos e pedidos.
+Serviço de pagamento: utilizado futuramente para permitir o processamento de pagamentos online.
+
+Estratégia de acompanhamento
+
+O acompanhamento do projeto será realizado por meio da divisão das tarefas entre os integrantes e da definição de prazos para cada atividade.
+
+As alterações e atualizações serão registradas no GitHub, permitindo acompanhar o histórico de desenvolvimento e manter os documentos organizados.
+
+Também serão realizadas revisões periódicas para verificar o andamento das tarefas, identificar dificuldades e garantir que os requisitos estabelecidos estejam sendo atendidos.
+
+Os integrantes deverão manter uma comunicação constante para organizar as atividades e resolver possíveis problemas durante o desenvolvimento.
+
+Identificação de riscos e ações preventivas
+
+Durante o desenvolvimento da GARDENSTICK, foram identificados alguns riscos que podem afetar o andamento do projeto.
+
+Risco 1 — Atraso nas entregas: pode ocorrer devido à falta de organização ou dificuldade em concluir as atividades dentro do prazo.
+
+Ação preventiva: dividir as tarefas entre os integrantes, estabelecer prazos e acompanhar o andamento do projeto.
+
+Risco 2 — Informações incorretas: pode acontecer quando dados de produtos, clientes ou pedidos são cadastrados incorretamente.
+
+Ação preventiva: validar as informações antes de salvá-las e realizar testes periódicos.
+
+Risco 3 — Problemas na integração de pagamentos: podem ocorrer falhas de comunicação com o serviço externo responsável pelo processamento das transações.
+
+Ação preventiva: planejar a integração com antecedência e realizar testes em ambiente de testes antes de disponibilizar pagamentos reais.
+
+Risco 4 — Perda de alterações: pode acontecer devido a exclusões acidentais ou problemas durante o desenvolvimento.
+
+Ação preventiva: utilizar o GitHub para armazenar os arquivos e realizar commits frequentes, mantendo o histórico das alterações.
+
+ Considerações finais
+
+O planejamento da GARDENSTICK estabelece uma organização inicial para o desenvolvimento do sistema, definindo os componentes da arquitetura, as principais interfaces, os dados manipulados, as responsabilidades da equipe e os possíveis riscos.
+
+Essas informações servirão como referência para orientar as próximas etapas de implementação e garantir que o desenvolvimento aconteça de maneira organizada.
+
