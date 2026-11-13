@@ -64,3 +64,29 @@ footer {
     padding: 20px;
     margin-top: 50px;
 }
+
+
+.produto {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #e2e8df;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease;
+}
+
+.produto:hover {
+    transform: translateY(-5px);
+}
+
+.produto h3 {
+    color: #526b50;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.produto p {
+    margin-bottom: 8px;
+    color: #555555;
+    font-size: 15px;
+}
