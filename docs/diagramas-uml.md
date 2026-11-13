@@ -1,38 +1,40 @@
-GARDENSTICK 🌷
-Diagramas UML
-1. Diagrama de Casos de Uso
+# GARDENSTICK 🌷
+# Diagramas UML
+
+## 1. Diagrama de Casos de Uso
 
 O Diagrama de Casos de Uso representa os atores que interagem com o sistema GARDENSTICK e as funcionalidades disponíveis para cada um deles.
 
-Atores
-Cliente: responsável por visualizar produtos, pesquisar flores, adicionar itens ao carrinho, realizar pedidos, efetuar pagamentos e acompanhar compras.
-Administrador: responsável pelo gerenciamento dos produtos e dos pedidos.
-Funcionário: responsável por consultar pedidos e auxiliar no acompanhamento das compras.
-Funcionalidades
+### Atores
 
-Cliente:
+- **Cliente:** responsável por visualizar produtos, pesquisar flores, adicionar itens ao carrinho, realizar pedidos, efetuar pagamentos e acompanhar compras.
+- **Administrador:** responsável pelo gerenciamento dos produtos e dos pedidos.
+- **Funcionário:** responsável por consultar pedidos e auxiliar no acompanhamento das compras.
 
-Visualizar catálogo.
-Pesquisar produtos.
-Adicionar produtos ao carrinho.
-Realizar pedidos.
-Efetuar pagamento.
-Acompanhar pedidos.
+### Funcionalidades
 
-Administrador:
+**Cliente:**
+- Visualizar catálogo.
+- Pesquisar produtos.
+- Adicionar produtos ao carrinho.
+- Realizar pedidos.
+- Efetuar pagamento.
+- Acompanhar pedidos.
 
-Cadastrar produtos.
-Editar produtos.
-Remover produtos.
-Visualizar pedidos.
-Atualizar status dos pedidos.
+**Administrador:**
+- Cadastrar produtos.
+- Editar produtos.
+- Remover produtos.
+- Visualizar pedidos.
+- Atualizar status dos pedidos.
 
-Funcionário:
+**Funcionário:**
+- Consultar pedidos.
+- Acompanhar status dos pedidos.
 
-Consultar pedidos.
-Acompanhar status dos pedidos.
-Código do diagrama
-mermaid
+### Código do diagrama
+
+```mermaid
 flowchart LR
     C[Cliente]
     A[Administrador]
@@ -67,114 +69,20 @@ flowchart LR
 
     F --- UC10
     F --- UC6
+```
 
-Explicação
+### Explicação
 
 O diagrama apresenta as principais funcionalidades disponíveis para cada tipo de usuário. O cliente utiliza o sistema para realizar compras, enquanto o administrador gerencia os produtos e pedidos. O funcionário auxilia no acompanhamento das compras.
 
-2. Diagrama de Classes
+## 2. Diagrama de Classes
 
-O Diagrama de Classes apresenta a estrutura do sistema por meio de classes, atributos e relacionamentos.
-
-Principais classes
-Cliente
-Produto
-Categoria
-Carrinho
-ItemCarrinho
-Pedido
-ItemPedido
-Pagamento
-Administrador
-Código do diagrama
-mermaid
-classDiagram
-    class Cliente {
-        +int id
-        +string nome
-        +string email
-        +cadastrar()
-        +consultarPedidos()
-    }
-
-    class Produto {
-        +int id
-        +string nome
-        +string descricao
-        +decimal preco
-        +int estoque
-        +consultar()
-    }
-
-    class Categoria {
-        +int id
-        +string nome
-    }
-
-    class Carrinho {
-        +int id
-        +adicionarProduto()
-        +removerProduto()
-        +calcularTotal()
-    }
-
-    class ItemCarrinho {
-        +int quantidade
-        +decimal subtotal
-    }
-
-    class Pedido {
-        +int id
-        +date data
-        +string status
-        +decimal valorTotal
-        +criarPedido()
-        +atualizarStatus()
-    }
-
-    class ItemPedido {
-        +int quantidade
-        +decimal precoUnitario
-    }
-
-    class Pagamento {
-        +int id
-        +string metodo
-        +string status
-        +decimal valor
-    }
-
-    class Administrador {
-        +int id
-        +string nome
-        +gerenciarProdutos()
-        +gerenciarPedidos()
-    }
-
-    Categoria "1" --> "0..*" Produto
-    Cliente "1" --> "1" Carrinho
-    Carrinho "1" --> "0..*" ItemCarrinho
-    Produto "1" --> "0..*" ItemCarrinho
-    Cliente "1" --> "0..*" Pedido
-    Pedido "1" --> "1..*" ItemPedido
-    Produto "1" --> "0..*" ItemPedido
-    Pedido "1" --> "0..1" Pagamento
-    Administrador ..> Produto
-    Administrador ..> Pedido
-
-Explicação
-
-O diagrama apresenta as principais entidades do sistema e como elas se relacionam. Um cliente pode possuir um carrinho e realizar vários pedidos. Os pedidos são compostos por itens relacionados aos produtos disponíveis no catálogo. O administrador gerencia os produtos e pedidos.
-
-3. Considerações finais
-
-Os diagramas UML permitem visualizar a organização e o funcionamento da GARDENSTICK antes da implementação.
-
-## Modelagem Orientada a Objetos — Classes Centrais
+O Diagrama de Classes apresenta a estrutura do sistema por meio de classes, atributos, métodos e relacionamentos.
 
 O sistema GARDENSTICK possui oito classes centrais que representam as principais funcionalidades de uma floricultura virtual.
 
-### 1. Cliente
+### 2.1. Cliente
+
 **Atributos:**
 - idCliente
 - nome
@@ -188,7 +96,8 @@ O sistema GARDENSTICK possui oito classes centrais que representam as principais
 - atualizarDados()
 - consultarPedidos()
 
-### 2. Produto
+### 2.2. Produto
+
 **Atributos:**
 - idProduto
 - nome
@@ -203,7 +112,8 @@ O sistema GARDENSTICK possui oito classes centrais que representam as principais
 - excluir()
 - consultarDisponibilidade()
 
-### 3. Categoria
+### 2.3. Categoria
+
 **Atributos:**
 - idCategoria
 - nome
@@ -214,7 +124,8 @@ O sistema GARDENSTICK possui oito classes centrais que representam as principais
 - editar()
 - listarProdutos()
 
-### 4. Carrinho
+### 2.4. Carrinho
+
 **Atributos:**
 - idCarrinho
 - dataCriacao
@@ -226,7 +137,8 @@ O sistema GARDENSTICK possui oito classes centrais que representam as principais
 - calcularTotal()
 - limparCarrinho()
 
-### 5. ItemCarrinho
+### 2.5. ItemCarrinho
+
 **Atributos:**
 - idItem
 - quantidade
@@ -237,7 +149,8 @@ O sistema GARDENSTICK possui oito classes centrais que representam as principais
 - alterarQuantidade()
 - calcularSubtotal()
 
-### 6. Pedido
+### 2.6. Pedido
+
 **Atributos:**
 - idPedido
 - dataPedido
@@ -251,7 +164,8 @@ O sistema GARDENSTICK possui oito classes centrais que representam as principais
 - calcularValorTotal()
 - consultarPedido()
 
-### 7. ItemPedido
+### 2.7. ItemPedido
+
 **Atributos:**
 - idItemPedido
 - quantidade
@@ -262,7 +176,8 @@ O sistema GARDENSTICK possui oito classes centrais que representam as principais
 - calcularSubtotal()
 - consultarProduto()
 
-### 8. Pagamento
+### 2.8. Pagamento
+
 **Atributos:**
 - idPagamento
 - formaPagamento
@@ -286,7 +201,9 @@ O sistema GARDENSTICK possui oito classes centrais que representam as principais
 - Cada ItemPedido está associado a um Produto.
 - Um Pedido pode possuir um Pagamento.
 
+### Código do diagrama
 
+```mermaid
 classDiagram
     class Cliente {
         -idCliente
@@ -381,12 +298,15 @@ classDiagram
     Pedido "1" --> "1..*" ItemPedido
     Produto "1" --> "0..*" ItemPedido
     Pedido "1" --> "0..1" Pagamento
-
+```
 
 O Administrador e o Funcionário continuam fazendo parte do sistema como perfis de acesso responsáveis pelo gerenciamento de produtos e pedidos, mas não foram incluídos entre as oito classes centrais desta modelagem.
 
+## 3. Considerações finais
 
-## Mudança Futura e Tipo de Manutenção
+Os diagramas UML permitem visualizar a organização e o funcionamento da GARDENSTICK antes da implementação. A modelagem das classes apresenta os principais atributos, métodos e relacionamentos necessários para orientar o desenvolvimento do sistema.
+
+## 4. Mudança Futura e Tipo de Manutenção
 
 Uma mudança futura provável no sistema GARDENSTICK seria a implementação de um sistema de cupons de desconto. Com essa funcionalidade, os clientes poderiam inserir códigos promocionais no carrinho de compras para receber descontos no valor total do pedido.
 
