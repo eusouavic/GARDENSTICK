@@ -71,3 +71,6 @@ function filtrarProdutos() {
 campoPesquisa.addEventListener("input", filtrarProdutos);
 
 filtroCategoria.addEventListener("change", filtrarProdutos);
+
+// Exibe todos os produtos ao carregar a página.
+exibirProdutos(produtos);
