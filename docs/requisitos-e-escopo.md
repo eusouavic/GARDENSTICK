@@ -69,7 +69,8 @@ RNF02 - Mantida a adaptação aos diferentes dispositivos.
 RNF03 - Maior detalhamento sobre proteção de dados e pagamentos.
 
 Definição do escopo
-Dentro do escopo (incluído)
+
+6.1 Dentro do escopo (incluído)
 Cadastro e exibição de flores, plantas e arranjos.
 Pesquisa de produtos por nome e categoria.
 Carrinho de compras.
