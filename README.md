@@ -74,6 +74,32 @@ Planejamento
 
 O projeto possui planejamento de equipe, definição de recursos necessários, estratégia de acompanhamento e identificação de riscos com ações preventivas.
 
+## Como executar o projeto
+
+O projeto está disponível para acesso pelo GitHub Pages:
+
+https://eusouavic.github.io/GARDENSTICK/
+
+Para visualizar o sistema:
+
+1. Acesse o link acima pelo navegador.
+2. Aguarde o carregamento da página inicial.
+3. Visualize os produtos disponíveis no catálogo.
+4. Utilize a barra de pesquisa para buscar produtos pelo nome.
+5. Utilize o filtro para visualizar produtos por categoria.
+
+## Tecnologias utilizadas
+
+- HTML5: estrutura das páginas.
+- CSS3: estilização e layout.
+- JavaScript: funcionalidades de pesquisa e filtragem de produtos.
+
+## Estado atual do desenvolvimento
+
+O projeto possui um protótipo funcional com catálogo de produtos, pesquisa por nome e filtro por categoria.
+
+As demais funcionalidades previstas no escopo serão desenvolvidas conforme o planejamento do projeto.
+
 Modelagem UML
 
 Foram elaborados dois diagramas:
