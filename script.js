@@ -34,6 +34,7 @@ const produtos = [
 
 const listaProdutos = document.getElementById("listaProdutos");
 const campoPesquisa = document.getElementById("campoPesquisa");
+const filtroCategoria = document.getElementById("filtroCategoria");
 
 function exibirProdutos(lista) {
     listaProdutos.innerHTML = "";
