@@ -78,7 +78,7 @@ Realização de pedidos pelo site.
 Opções de pagamento online.
 Acompanhamento do status dos pedidos.
 Área administrativa para gerenciar produtos e pedidos.
-Layout responsivo para celulares e computadores.
+Layout responsivo para celulares, tablets e computadores.
 6.2. Fora do escopo (não incluído inicialmente)
 Aplicativo próprio para celulares.
 Chat com atendentes.
