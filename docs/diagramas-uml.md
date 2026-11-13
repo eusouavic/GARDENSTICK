@@ -286,4 +286,101 @@ O sistema GARDENSTICK possui oito classes centrais que representam as principais
 - Cada ItemPedido está associado a um Produto.
 - Um Pedido pode possuir um Pagamento.
 
+
+classDiagram
+    class Cliente {
+        -idCliente
+        -nome
+        -email
+        -senha
+        -telefone
+        -endereco
+        +cadastrar()
+        +atualizarDados()
+        +consultarPedidos()
+    }
+
+    class Produto {
+        -idProduto
+        -nome
+        -descricao
+        -preco
+        -quantidadeEstoque
+        -imagem
+        +cadastrar()
+        +atualizar()
+        +excluir()
+        +consultarDisponibilidade()
+    }
+
+    class Categoria {
+        -idCategoria
+        -nome
+        -descricao
+        +cadastrar()
+        +editar()
+        +listarProdutos()
+    }
+
+    class Carrinho {
+        -idCarrinho
+        -dataCriacao
+        -valorTotal
+        +adicionarProduto()
+        +removerProduto()
+        +calcularTotal()
+        +limparCarrinho()
+    }
+
+    class ItemCarrinho {
+        -idItem
+        -quantidade
+        -precoUnitario
+        -subtotal
+        +alterarQuantidade()
+        +calcularSubtotal()
+    }
+
+    class Pedido {
+        -idPedido
+        -dataPedido
+        -status
+        -valorTotal
+        -enderecoEntrega
+        +criarPedido()
+        +atualizarStatus()
+        +calcularValorTotal()
+        +consultarPedido()
+    }
+
+    class ItemPedido {
+        -idItemPedido
+        -quantidade
+        -precoUnitario
+        -subtotal
+        +calcularSubtotal()
+        +consultarProduto()
+    }
+
+    class Pagamento {
+        -idPagamento
+        -formaPagamento
+        -valor
+        -status
+        -dataPagamento
+        +processarPagamento()
+        +confirmarPagamento()
+        +consultarStatus()
+    }
+
+    Categoria "1" --> "0..*" Produto
+    Cliente "1" --> "1" Carrinho
+    Carrinho "1" --> "0..*" ItemCarrinho
+    Produto "1" --> "0..*" ItemCarrinho
+    Cliente "1" --> "0..*" Pedido
+    Pedido "1" --> "1..*" ItemPedido
+    Produto "1" --> "0..*" ItemPedido
+    Pedido "1" --> "0..1" Pagamento
+
+
 O Administrador e o Funcionário continuam fazendo parte do sistema como perfis de acesso responsáveis pelo gerenciamento de produtos e pedidos, mas não foram incluídos entre as oito classes centrais desta modelagem.
