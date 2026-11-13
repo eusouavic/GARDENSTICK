@@ -53,15 +53,20 @@ function exibirProdutos(lista) {
     });
 }
 
-campoPesquisa.addEventListener("input", function() {
+function filtrarProdutos() {
     const pesquisa = campoPesquisa.value.toLowerCase();
-    const filtroCategoria = document.getElementById("filtroCategoria");
+    const categoria = filtroCategoria.value;
 
     const produtosFiltrados = produtos.filter(function(produto) {
-        return produto.nome.toLowerCase().includes(pesquisa);
+        const nomeCorresponde = produto.nome.toLowerCase().includes(pesquisa);
+        const categoriaCorresponde = categoria === "" || produto.categoria === categoria;
+
+        return nomeCorresponde && categoriaCorresponde;
     });
 
     exibirProdutos(produtosFiltrados);
-});
+}
 
-exibirProdutos(produtos);
+campoPesquisa.addEventListener("input", filtrarProdutos);
+
+filtroCategoria.addEventListener("change", filtrarProdutos);
