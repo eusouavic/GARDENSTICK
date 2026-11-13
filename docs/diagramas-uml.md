@@ -170,4 +170,120 @@ O diagrama apresenta as principais entidades do sistema e como elas se relaciona
 
 Os diagramas UML permitem visualizar a organização e o funcionamento da GARDENSTICK antes da implementação.
 
-O Diagrama de Cas
+## Modelagem Orientada a Objetos — Classes Centrais
+
+O sistema GARDENSTICK possui oito classes centrais que representam as principais funcionalidades de uma floricultura virtual.
+
+### 1. Cliente
+**Atributos:**
+- idCliente
+- nome
+- email
+- senha
+- telefone
+- endereco
+
+**Métodos:**
+- cadastrar()
+- atualizarDados()
+- consultarPedidos()
+
+### 2. Produto
+**Atributos:**
+- idProduto
+- nome
+- descricao
+- preco
+- quantidadeEstoque
+- imagem
+
+**Métodos:**
+- cadastrar()
+- atualizar()
+- excluir()
+- consultarDisponibilidade()
+
+### 3. Categoria
+**Atributos:**
+- idCategoria
+- nome
+- descricao
+
+**Métodos:**
+- cadastrar()
+- editar()
+- listarProdutos()
+
+### 4. Carrinho
+**Atributos:**
+- idCarrinho
+- dataCriacao
+- valorTotal
+
+**Métodos:**
+- adicionarProduto()
+- removerProduto()
+- calcularTotal()
+- limparCarrinho()
+
+### 5. ItemCarrinho
+**Atributos:**
+- idItem
+- quantidade
+- precoUnitario
+- subtotal
+
+**Métodos:**
+- alterarQuantidade()
+- calcularSubtotal()
+
+### 6. Pedido
+**Atributos:**
+- idPedido
+- dataPedido
+- status
+- valorTotal
+- enderecoEntrega
+
+**Métodos:**
+- criarPedido()
+- atualizarStatus()
+- calcularValorTotal()
+- consultarPedido()
+
+### 7. ItemPedido
+**Atributos:**
+- idItemPedido
+- quantidade
+- precoUnitario
+- subtotal
+
+**Métodos:**
+- calcularSubtotal()
+- consultarProduto()
+
+### 8. Pagamento
+**Atributos:**
+- idPagamento
+- formaPagamento
+- valor
+- status
+- dataPagamento
+
+**Métodos:**
+- processarPagamento()
+- confirmarPagamento()
+- consultarStatus()
+
+### Relacionamentos entre as classes
+
+- Um Cliente possui um Carrinho.
+- Um Cliente pode realizar vários Pedidos.
+- Uma Categoria pode possuir vários Produtos.
+- Um Carrinho pode conter vários ItensCarrinho.
+- Cada ItemCarrinho está associado a um Produto.
+- Um Pedido possui um ou mais ItensPedido.
+- Cada ItemPedido está associado a um Produto.
+- Um Pedido pode possuir um Pagamento.
+
+O Administrador e o Funcionário continuam fazendo parte do sistema como perfis de acesso responsáveis pelo gerenciamento de produtos e pedidos, mas não foram incluídos entre as oito classes centrais desta modelagem.
