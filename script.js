@@ -55,6 +55,7 @@ function exibirProdutos(lista) {
 
 campoPesquisa.addEventListener("input", function() {
     const pesquisa = campoPesquisa.value.toLowerCase();
+    const filtroCategoria = document.getElementById("filtroCategoria");
 
     const produtosFiltrados = produtos.filter(function(produto) {
         return produto.nome.toLowerCase().includes(pesquisa);
