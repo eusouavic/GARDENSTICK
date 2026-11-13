@@ -384,3 +384,14 @@ classDiagram
 
 
 O Administrador e o Funcionário continuam fazendo parte do sistema como perfis de acesso responsáveis pelo gerenciamento de produtos e pedidos, mas não foram incluídos entre as oito classes centrais desta modelagem.
+
+
+## Mudança Futura e Tipo de Manutenção
+
+Uma mudança futura provável no sistema GARDENSTICK seria a implementação de um sistema de cupons de desconto. Com essa funcionalidade, os clientes poderiam inserir códigos promocionais no carrinho de compras para receber descontos no valor total do pedido.
+
+Para implementar essa melhoria, seria necessário adicionar novas regras de negócio e adaptar o cálculo do valor total do carrinho e do pedido.
+
+**Tipo de manutenção: Manutenção Perfectiva (Evolutiva).**
+
+Essa manutenção é classificada como perfectiva porque tem como objetivo melhorar o sistema e adicionar uma nova funcionalidade, proporcionando mais benefícios e praticidade aos usuários. Não se trata de corrigir um erro existente, mas de ampliar os recursos oferecidos pelo GARDENSTICK.
