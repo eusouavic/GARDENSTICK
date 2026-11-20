@@ -62,6 +62,8 @@ Os documentos técnicos estão disponíveis na pasta `docs`:
 - Arquitetura e Plano;
 - Diagramas UML;
 - [DFD e Dicionário de Dados](docs/dfd-e-dicionario-dados.md);
+- [Análise Básica de Segurança](docs/analise-de-seguranca.md);
+- [Plano de Testes v1.0](docs/plano-de-testes-v1.0.md);
 - [Planejamento incremental](docs/planejamento-incremental.md).
 
 O projeto também possui planejamento de equipe, definição de recursos necessários, estratégia de acompanhamento e identificação de riscos com ações preventivas.
