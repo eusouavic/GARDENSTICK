@@ -6,12 +6,18 @@ O formato segue a organização de versões, com datas e categorias de mudanças
 
 ## [Em desenvolvimento] — 2026-11-20
 
-### Planejado
-- Incremento 2: carrinho de compras com inclusão, alteração de quantidade, remoção e totalização.
-- Validação do comportamento do carrinho antes de integrar à branch principal.
+### Adicionado
+- Seção visual do carrinho na página.
+- Inclusão de produtos e soma de quantidades quando o mesmo produto é adicionado novamente.
+- Controles para aumentar, diminuir e remover itens.
+- Cálculo de subtotal por item e total geral.
+- Mensagem para carrinho vazio.
 
-### Corrigido / melhoria identificada
-- Pesquisa ou filtro sem resultados não apresentava mensagem ao usuário. Será incluída uma mensagem de estado vazio.
+### Corrigido
+- Pesquisa ou filtro sem resultados agora apresenta a mensagem “Nenhum produto encontrado”, em vez de deixar a área vazia.
+
+### Validação pendente
+- Teste manual no navegador antes de integrar a branch à `main`.
 
 ### Documentação
 - Definido o modelo incremental e o planejamento das releases em `docs/planejamento-incremental.md`.
