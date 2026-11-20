@@ -90,3 +90,89 @@ footer {
     color: #555555;
     font-size: 15px;
 }
+
+
+/* Incremento 2 — carrinho e estados vazios */
+#filtroCategoria {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto 15px;
+    padding: 12px;
+    border: 1px solid #c8d0c3;
+    border-radius: 8px;
+    background-color: #ffffff;
+    font-size: 16px;
+}
+
+.botao-adicionar,
+.controles-carrinho button {
+    border: 0;
+    border-radius: 7px;
+    background-color: #526b50;
+    color: #ffffff;
+    padding: 10px 14px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.botao-adicionar {
+    margin-top: 12px;
+}
+
+.botao-adicionar:hover,
+.controles-carrinho button:hover {
+    background-color: #3f563e;
+}
+
+.mensagem-vazia {
+    color: #687568;
+    text-align: center;
+    padding: 20px;
+}
+
+.carrinho {
+    max-width: 1100px;
+    margin: 20px auto 50px;
+    padding: 25px;
+    background-color: #ffffff;
+    border: 1px solid #e2e8df;
+    border-radius: 12px;
+}
+
+.carrinho h2 {
+    margin-bottom: 20px;
+}
+
+.item-carrinho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 16px 0;
+    border-bottom: 1px solid #e2e8df;
+}
+
+.controles-carrinho {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.total-carrinho {
+    text-align: right;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+@media (max-width: 600px) {
+    .carrinho {
+        margin: 20px 15px 40px;
+    }
+
+    .item-carrinho {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
