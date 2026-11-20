@@ -92,6 +92,11 @@ Análise Estruturada — DFD e Dicionário de Dados
 
 O documento de análise estruturada está disponível em [DFD e Dicionário de Dados](docs/dfd-e-dicionario-dados.md), incluindo diagrama de contexto, DFD nível 0, dicionário de dados e comparação com o protótipo implementado.
 
+## Planejamento e controle de versão
+
+- [Planejamento incremental](docs/planejamento-incremental.md): modelo de processo, incrementos e critérios de validação.
+- [Changelog](CHANGELOG.md): histórico das alterações e melhorias.
+
 ## Tecnologias utilizadas
 
 - HTML5: estrutura das páginas.
@@ -100,9 +105,7 @@ O documento de análise estruturada está disponível em [DFD e Dicionário de D
 
 ## Estado atual do desenvolvimento
 
-O projeto possui um protótipo funcional com catálogo de produtos, pesquisa por nome e filtro por categoria.
-
-As demais funcionalidades previstas no escopo serão desenvolvidas conforme o planejamento do projeto.
+A versão principal possui um protótipo funcional com catálogo de produtos, pesquisa por nome e filtro por categoria. O incremento do carrinho está em desenvolvimento na branch `feature/carrinho-basico` e será integrado à versão principal após validação.
 
 Modelagem UML
 
