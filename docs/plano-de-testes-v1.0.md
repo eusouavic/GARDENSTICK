@@ -25,7 +25,7 @@ Fora do escopo implementado: autenticação, autorização, persistência, cadas
 - **Sistema:** verifica o fluxo completo no navegador, incluindo pesquisa e operações do carrinho.
 - **Aceitação:** verifica se as tarefas principais podem ser realizadas de forma compreensível pelo usuário.
 
-Como o projeto ainda não possui estrutura de testes automatizados, os casos abaixo devem ser executados manualmente no navegador e registrados com capturas de tela. Não declarar teste automatizado sem implementar e executar uma ferramenta específica.
+Como o projeto ainda não possui estrutura de testes automatizados, os casos abaixo foram executados manualmente no navegador. Não declarar teste automatizado sem implementar e executar uma ferramenta específica.
 
 ## 4. Casos de teste
 
@@ -49,7 +49,7 @@ Como o projeto ainda não possui estrutura de testes automatizados, os casos aba
 3. Executar cada cenário da tabela.
 4. Comparar o resultado observado com o resultado esperado.
 5. Registrar o status como **Aprovado**, **Reprovado** ou **Bloqueado**.
-6. Para cada caso executado, salvar uma captura de tela que demonstre o resultado.
+6. Salvar capturas de tela que demonstrem os resultados na pasta `docs/evidencias-testes/`.
 7. Se houver falha, registrar o bug, corrigir, repetir o teste e guardar a evidência da nova execução.
 
 ## 6. Registro de execução
@@ -69,13 +69,13 @@ Os dez casos abaixo foram executados manualmente no navegador em 20/11/2026. A p
 | CT-009 | Aprovado | Carrinho vazio exibiu a mensagem correspondente e total R$ 0,00 |
 | CT-010 | Aprovado | Lírio Branco foi adicionado com quantidade 1 e total R$ 45,00 |
 
-**Evidências visuais:** as capturas de tela ainda precisam ser salvas no repositório em `docs/evidencias-testes/`. A confirmação dos resultados nesta execução não substitui os arquivos de evidência.
+**Evidência visual:** [captura de tela da execução manual](evidencias-testes/Captura%20de%20tela%202026-11-20%20153247.png). A imagem foi armazenada em `docs/evidencias-testes/`. Ela é uma evidência visual complementar e não deve ser interpretada como dez capturas individuais, uma para cada caso.
 
 **Bugs:** nenhum defeito foi relatado durante esta rodada manual. Isso não comprova ausência de bugs em cenários não testados.
 
 ## 7. Critério de conclusão
 
-A execução manual dos dez cenários foi concluída com resultado aprovado. A etapa de documentação de evidências visuais permanece pendente. Caso sejam identificadas falhas em testes futuros, elas deverão ser registradas, corrigidas e retestadas. Casos não aplicáveis devem ser justificados.
+A execução manual dos dez cenários foi concluída com resultado aprovado. Uma captura de tela foi anexada como evidência visual complementar. Caso sejam identificadas falhas em testes futuros, elas deverão ser registradas, corrigidas e retestadas. Casos não aplicáveis devem ser justificados.
 
 ## 8. Limitações
 
