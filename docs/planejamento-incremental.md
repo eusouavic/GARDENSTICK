@@ -9,7 +9,7 @@ O projeto será conduzido pelo **modelo incremental**, pois permite entregar fun
 | Incremento | Release prevista | Conteúdo | Situação |
 |---|---|---|---|
 | 1 — Catálogo | 0.1.0 | Estrutura inicial do site, catálogo de produtos, pesquisa e filtro por categoria. | Concluído como protótipo. |
-| 2 — Carrinho | 0.2.0 | Adicionar produtos, alterar quantidades, remover itens e calcular subtotal/total. | Em desenvolvimento nesta etapa. |
+| 2 — Carrinho | 0.2.0 | Adicionar produtos, alterar quantidades, remover itens e calcular subtotal/total. | Implementado na branch `feature/carrinho-basico`; validação manual pendente. |
 | 3 — Pedidos | 0.3.0 | Identificação do cliente, dados de entrega, resumo e registro do pedido. | Planejado. |
 | 4 — Administração | 0.4.0 | Cadastro, edição, remoção de produtos e consulta/atualização de pedidos. | Planejado. |
 | 5 — Persistência e pagamento | 1.0.0 | Backend, banco de dados, integração de pagamento, validações e testes integrados. | Planejado. |
@@ -59,3 +59,6 @@ A versão inicial do catálogo corresponde ao marco planejado `v0.1.0`. O increm
 
 - 2026-11-20: modelo incremental escolhido e planejamento registrado.
 - 2026-11-20: criada a branch `feature/carrinho-basico` para trabalhar isoladamente no incremento do carrinho.
+- 2026-11-20: implementados inclusão de itens, alteração de quantidades, remoção e totalização do carrinho.
+- 2026-11-20: corrigida a ausência de mensagem quando pesquisa/filtro não retorna produtos.
+- 2026-11-20: validação manual no navegador ainda necessária antes da integração.
