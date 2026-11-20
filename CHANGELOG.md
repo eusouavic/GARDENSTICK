@@ -4,7 +4,7 @@ Todas as alterações relevantes do projeto GARDENSTICK serão registradas neste
 
 O formato segue a organização de versões, com datas e categorias de mudanças.
 
-## [Em desenvolvimento] — 2026-11-20
+## [0.2.0] — 2026-11-20 (pré-lançamento)
 
 ### Adicionado
 - Seção visual do carrinho na página.
@@ -16,12 +16,14 @@ O formato segue a organização de versões, com datas e categorias de mudanças
 ### Corrigido
 - Pesquisa ou filtro sem resultados agora apresenta a mensagem “Nenhum produto encontrado”, em vez de deixar a área vazia.
 
-### Validação pendente
-- Teste manual no navegador antes de integrar a branch à `main`.
-
-### Documentação
+### Documentação e integração
 - Definido o modelo incremental e o planejamento das releases em `docs/planejamento-incremental.md`.
-- Criada a branch `feature/carrinho-basico` para o desenvolvimento isolado do incremento 2.
+- Desenvolvimento realizado na branch `feature/carrinho-basico` e integrado à `main` pelo Pull Request #1.
+- Release `v0.2.0` publicada como pré-lançamento no GitHub.
+
+### Limites desta versão
+- O carrinho é mantido apenas em memória no navegador; os dados não permanecem após recarregar a página.
+- Ainda não há integração com banco de dados, criação de pedidos ou processamento de pagamentos.
 
 ## [0.1.0] — Marco do protótipo inicial
 
@@ -30,4 +32,4 @@ O formato segue a organização de versões, com datas e categorias de mudanças
 - Pesquisa de produtos por nome.
 - Filtro por categoria.
 
-> Este registro descreve o marco funcional já existente no repositório. A tag formal da versão deverá ser criada no GitHub quando a operação estiver disponível.
+> Este registro descreve o marco funcional inicial do protótipo. A release formal publicada nesta etapa é a v0.2.0.
