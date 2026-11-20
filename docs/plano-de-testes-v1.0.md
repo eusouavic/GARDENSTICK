@@ -31,16 +31,16 @@ Como o projeto ainda não possui estrutura de testes automatizados, os casos aba
 
 | ID | Tipo | Cenário | Entrada / ação | Resultado esperado |
 |---|---|---|---|---|
-| CT-001 | Unitário | Formatação de preço | Exibir o preço 89.90 | Valor formatado como R$ 89,90 |
-| CT-002 | Unitário | Cálculo de subtotal | Adicionar 2 unidades de Buquê de Rosas (R$ 89,90) | Subtotal de R$ 179,80 |
-| CT-003 | Integração | Adicionar produto pelo catálogo | Clicar em “Adicionar ao carrinho” no Buquê de Rosas | Produto aparece no carrinho com quantidade 1 |
-| CT-004 | Integração | Atualizar quantidade e total | Adicionar o mesmo produto duas vezes | Quantidade 2 e total de R$ 179,80 |
-| CT-005 | Integração | Remover produto | Clicar em “Remover” no item do carrinho | Item removido e total atualizado |
+| CT-001 | Sistema (verificação manual) | Exibição de preço no catálogo | Localizar Buquê de Rosas | Preço exibido como R$ 89,90 |
+| CT-002 | Integração | Adicionar produto pelo catálogo | Adicionar Buquê de Rosas ao carrinho | Produto aparece com quantidade 1 e total R$ 89,90 |
+| CT-003 | Integração | Aumentar quantidade | Clicar uma vez no botão “+” do Buquê de Rosas | Quantidade 2 e total R$ 179,80 |
+| CT-004 | Integração | Diminuir quantidade | Clicar uma vez no botão “−” | Quantidade 1 e total R$ 89,90 |
+| CT-005 | Integração | Remover produto | Clicar no botão de remover do item | Item removido e mensagem de carrinho vazio |
 | CT-006 | Sistema | Pesquisar produto existente | Digitar “Orquídea” | Apenas o produto correspondente é exibido |
-| CT-007 | Sistema | Combinar pesquisa e categoria | Selecionar “Plantas” e pesquisar “Orquídea” | Orquídea é exibida |
-| CT-008 | Sistema | Pesquisa sem resultado | Pesquisar um nome inexistente | Mensagem “Nenhum produto encontrado” |
-| CT-009 | Sistema | Carrinho vazio | Remover todos os itens | Mensagem “Seu carrinho está vazio” e total R$ 0,00 |
-| CT-010 | Aceitação | Fluxo principal de compra demonstrativa | Localizar um produto e adicioná-lo ao carrinho | Usuário consegue localizar o produto e conferir quantidade e valor no carrinho |
+| CT-007 | Sistema | Combinar pesquisa e categoria | Manter “Orquídea” na busca e selecionar “Plantas” | Orquídea continua sendo exibida |
+| CT-008 | Sistema | Pesquisa sem resultado | Pesquisar “Flor inexistente” | Mensagem “Nenhum produto encontrado” |
+| CT-009 | Sistema | Carrinho vazio | Conferir o carrinho sem itens | Mensagem de carrinho vazio e total R$ 0,00 |
+| CT-010 | Aceitação | Fluxo principal de compra demonstrativa | Pesquisar Lírio Branco e adicioná-lo ao carrinho | Produto aparece com quantidade 1 e total R$ 45,00 |
 
 ## 5. Procedimento de execução
 
@@ -54,15 +54,28 @@ Como o projeto ainda não possui estrutura de testes automatizados, os casos aba
 
 ## 6. Registro de execução
 
-Os casos CT-001 a CT-010 estão definidos, mas precisam ter seus resultados e evidências registrados nesta etapa. Os testes manuais do carrinho realizados durante o incremento 0.2.0 foram registrados no histórico de desenvolvimento; isso não substitui a execução e evidência individual de todos os casos desta matriz.
+Os dez casos abaixo foram executados manualmente no navegador em 20/11/2026. A pessoa responsável confirmou que cada resultado esperado foi observado. Como não há framework de testes automatizados no projeto, estes registros representam testes manuais; CT-001 não é um teste unitário isolado de função.
 
-| ID | Status nesta revisão | Evidência |
+| ID | Status | Resultado observado |
 |---|---|---|
-| CT-001 a CT-010 | Pendente de execução e registro individual | Salvar em `docs/evidencias-testes/` |
+| CT-001 | Aprovado | Buquê de Rosas exibiu R$ 89,90 |
+| CT-002 | Aprovado | Buquê de Rosas entrou no carrinho com quantidade 1 e total R$ 89,90 |
+| CT-003 | Aprovado | Quantidade passou para 2 e total para R$ 179,80 |
+| CT-004 | Aprovado | Quantidade voltou para 1 e total para R$ 89,90 |
+| CT-005 | Aprovado | Produto foi removido e o carrinho ficou vazio |
+| CT-006 | Aprovado | Busca por Orquídea exibiu o produto correspondente |
+| CT-007 | Aprovado | Orquídea continuou aparecendo com o filtro Plantas |
+| CT-008 | Aprovado | Busca sem correspondência exibiu “Nenhum produto encontrado” |
+| CT-009 | Aprovado | Carrinho vazio exibiu a mensagem correspondente e total R$ 0,00 |
+| CT-010 | Aprovado | Lírio Branco foi adicionado com quantidade 1 e total R$ 45,00 |
+
+**Evidências visuais:** as capturas de tela ainda precisam ser salvas no repositório em `docs/evidencias-testes/`. A confirmação dos resultados nesta execução não substitui os arquivos de evidência.
+
+**Bugs:** nenhum defeito foi relatado durante esta rodada manual. Isso não comprova ausência de bugs em cenários não testados.
 
 ## 7. Critério de conclusão
 
-A rodada de testes será considerada concluída quando todos os casos aplicáveis tiverem status registrado, as falhas estiverem documentadas e os testes reprovados forem repetidos após a correção. Casos não aplicáveis devem ser justificados.
+A execução manual dos dez cenários foi concluída com resultado aprovado. A etapa de documentação de evidências visuais permanece pendente. Caso sejam identificadas falhas em testes futuros, elas deverão ser registradas, corrigidas e retestadas. Casos não aplicáveis devem ser justificados.
 
 ## 8. Limitações
 
