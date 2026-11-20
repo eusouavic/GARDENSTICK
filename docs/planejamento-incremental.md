@@ -1,0 +1,61 @@
+# Planejamento Incremental — GARDENSTICK
+
+## Modelo de processo escolhido
+
+O projeto será conduzido pelo **modelo incremental**, pois permite entregar funcionalidades em partes pequenas, validar cada etapa e evoluir o sistema sem esperar que todas as funções estejam prontas. Essa estratégia também combina com o estado atual: o protótipo já possui catálogo, pesquisa e filtro por categoria.
+
+## Incrementos e releases planejados
+
+| Incremento | Release prevista | Conteúdo | Situação |
+|---|---|---|---|
+| 1 — Catálogo | 0.1.0 | Estrutura inicial do site, catálogo de produtos, pesquisa e filtro por categoria. | Concluído como protótipo. |
+| 2 — Carrinho | 0.2.0 | Adicionar produtos, alterar quantidades, remover itens e calcular subtotal/total. | Em desenvolvimento nesta etapa. |
+| 3 — Pedidos | 0.3.0 | Identificação do cliente, dados de entrega, resumo e registro do pedido. | Planejado. |
+| 4 — Administração | 0.4.0 | Cadastro, edição, remoção de produtos e consulta/atualização de pedidos. | Planejado. |
+| 5 — Persistência e pagamento | 1.0.0 | Backend, banco de dados, integração de pagamento, validações e testes integrados. | Planejado. |
+
+As versões são metas de organização. Uma release só deverá ser marcada como concluída quando suas funcionalidades forem implementadas e verificadas.
+
+## Composição do incremento atual — Carrinho
+
+1. Exibir a ação de adicionar ao carrinho nos produtos.
+2. Manter os itens adicionados durante a navegação na página.
+3. Permitir aumentar e diminuir a quantidade.
+4. Permitir remover um produto.
+5. Atualizar subtotal por item e total do carrinho.
+6. Exibir uma mensagem quando o carrinho estiver vazio.
+
+**Limite desta entrega:** o carrinho é mantido apenas em memória no navegador. Ele ainda não salva dados em banco, não cria pedidos e não processa pagamentos.
+
+## Organização do repositório e branches
+
+- `main`: versão principal, mantendo o que já foi validado.
+- `feature/nome-da-funcionalidade`: desenvolvimento isolado de cada incremento.
+- `fix/nome-do-ajuste`: correções pontuais.
+- Após testar a funcionalidade, as alterações da branch de trabalho podem ser integradas à `main` por pull request ou merge.
+
+Branch criada para esta etapa: `feature/carrinho-basico`.
+
+## Controle de versão e release
+
+A versão inicial do catálogo corresponde ao marco planejado `v0.1.0`. O incremento do carrinho será candidato à `v0.2.0` após implementação e validação. Não considerar uma versão como release publicada antes da criação efetiva da tag no GitHub.
+
+## Bug/melhoria identificada e tratamento
+
+**Problema observado no código:** quando a pesquisa ou o filtro não encontra nenhum produto, a função de renderização limpa a lista e não apresenta orientação ao usuário, deixando uma área vazia.
+
+**Tratamento:** incluir uma mensagem clara de “Nenhum produto encontrado” e estilizar essa mensagem. A correção melhora o retorno visual sem alterar os produtos cadastrados.
+
+## Critérios de validação do incremento do carrinho
+
+- Adicionar um produto deve exibi-lo no carrinho.
+- Adicionar o mesmo produto novamente deve aumentar sua quantidade.
+- Os controles de quantidade devem atualizar subtotal e total.
+- Remover um item deve atualizar a lista e o total.
+- Carrinho sem itens deve apresentar mensagem apropriada.
+- Pesquisa sem resultados deve apresentar mensagem apropriada.
+
+## Histórico de execução
+
+- 2026-11-20: modelo incremental escolhido e planejamento registrado.
+- 2026-11-20: criada a branch `feature/carrinho-basico` para trabalhar isoladamente no incremento do carrinho.
