@@ -1,5 +1,24 @@
 # Changelog
 
+## [1.0.0] — 2026-11-20 (validação e documentação)
+
+### Testes
+- Executados manualmente no navegador os dez cenários CT-001 a CT-010 do plano de testes; todos foram confirmados como aprovados pelo responsável pela execução.
+- Registrados os resultados em `docs/plano-de-testes-v1.0.md`.
+- A rodada não utilizou framework de testes automatizados.
+
+### Segurança
+- Adicionada análise básica de segurança em `docs/analise-de-seguranca.md`.
+- Documentados os limites do protótipo, incluindo ausência de backend, autenticação, banco de dados e pagamentos.
+- Registrado o ponto de atenção sobre uso de `innerHTML` e recomendações para conteúdo dinâmico futuro.
+
+### Documentação
+- README atualizado com links para o plano de testes e a análise de segurança.
+
+### Limites
+- Esta etapa documenta e valida o frontend existente; não adiciona funcionalidades de backend, persistência, contas de usuário ou pagamento.
+- Evidências visuais devem ser mantidas em `docs/evidencias-testes/`; a confirmação dos resultados não substitui a conferência dos arquivos de captura.
+
 Todas as alterações relevantes do projeto GARDENSTICK serão registradas neste arquivo.
 
 O formato segue a organização de versões, com datas e categorias de mudanças.

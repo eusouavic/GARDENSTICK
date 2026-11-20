@@ -62,6 +62,8 @@ Os documentos técnicos estão disponíveis na pasta `docs`:
 - Arquitetura e Plano;
 - Diagramas UML;
 - [DFD e Dicionário de Dados](docs/dfd-e-dicionario-dados.md);
+- [Análise Básica de Segurança](docs/analise-de-seguranca.md);
+- [Plano de Testes v1.0](docs/plano-de-testes-v1.0.md);
 - [Planejamento incremental](docs/planejamento-incremental.md).
 
 O projeto também possui planejamento de equipe, definição de recursos necessários, estratégia de acompanhamento e identificação de riscos com ações preventivas.
@@ -71,18 +73,37 @@ O projeto também possui planejamento de equipe, definição de recursos necess�
 - [CHANGELOG](CHANGELOG.md): histórico das alterações e melhorias.
 - [Release v0.2.0](https://github.com/eusouavic/GARDENSTICK/releases/tag/v0.2.0): pré-lançamento do incremento do carrinho.
 
-## Como executar o projeto
-O projeto está disponível pelo GitHub Pages:
+## Instalação e execução
 
-https://eusouavic.github.io/GARDENSTICK/
+### Requisitos
+- Navegador atualizado (Chrome, Firefox, Edge ou equivalente).
+- Para executar localmente, Git é opcional; também é possível baixar o ZIP do repositório.
+- Não é necessário instalar Node.js, PHP, XAMPP ou banco de dados para este protótipo.
+- Não há dependências ou bibliotecas externas obrigatórias.
 
-Para visualizar o sistema:
-1. Acesse o link acima pelo navegador.
-2. Aguarde o carregamento da página inicial.
-3. Visualize os produtos disponíveis no catálogo.
-4. Utilize a barra de pesquisa para buscar produtos pelo nome.
-5. Utilize o filtro para visualizar produtos por categoria.
-6. Adicione produtos ao carrinho e teste os controles de quantidade e remoção.
+### Executar pelo GitHub Pages
+1. Acesse https://eusouavic.github.io/GARDENSTICK/.
+2. Aguarde o carregamento do catálogo.
+
+### Executar localmente
+1. Baixe ou clone este repositório.
+2. Abra a pasta do projeto no computador.
+3. Abra o arquivo `index.html` em um navegador.
+4. Para editar o projeto, utilize um editor de código, como o Visual Studio Code.
+
+### Como utilizar
+1. Consulte os seis produtos disponíveis no catálogo.
+2. Digite o nome de uma flor ou planta no campo de pesquisa para localizar um produto.
+3. Utilize o filtro para selecionar Flores, Plantas ou Arranjos.
+4. Clique em **Adicionar ao carrinho** no produto desejado.
+5. Utilize os botões `+` e `−` para alterar a quantidade.
+6. Clique em **Remover** para excluir um item do carrinho.
+7. Confira os subtotais e o total geral exibidos no carrinho.
+
+### Limitações conhecidas
+- O carrinho é armazenado somente na memória da página e é apagado ao atualizar ou fechar a página.
+- Não há cadastro ou login de usuários, backend, banco de dados, painel administrativo, criação real de pedidos ou processamento de pagamentos.
+- O catálogo é fixo e definido no arquivo `script.js`.
 
 ## Tecnologias utilizadas
 - HTML5: estrutura das páginas.
