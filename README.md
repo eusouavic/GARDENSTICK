@@ -88,6 +88,10 @@ Para visualizar o sistema:
 4. Utilize a barra de pesquisa para buscar produtos pelo nome.
 5. Utilize o filtro para visualizar produtos por categoria.
 
+Análise Estruturada — DFD e Dicionário de Dados
+
+O documento de análise estruturada está disponível em [DFD e Dicionário de Dados](docs/dfd-e-dicionario-dados.md), incluindo diagrama de contexto, DFD nível 0, dicionário de dados e comparação com o protótipo implementado.
+
 ## Tecnologias utilizadas
 
 - HTML5: estrutura das páginas.
